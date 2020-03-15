@@ -29,11 +29,12 @@ export default class SelectCountry extends Component {
   }
 
   mountStats(val){
-    this.state.countries.map(test => {
-      if(val === test.country_name){
-        this.setState({ countryConfirmed: test.cases, countryDeath: test.deaths, countryRecovery: test.total_recovered });
-      }
-    });
+    this.state.countries
+      .filter(test => test.country_name === val)
+      .map(test => (
+          this.setState({ countryConfirmed: test.cases, countryDeath: test.deaths, countryRecovery: test.total_recovered })
+      )
+    );
   }
 
   sortAscending = (countries) => {    
