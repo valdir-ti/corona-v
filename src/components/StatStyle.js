@@ -14,3 +14,21 @@ export const StatBlock = styled.div`
     font-size: 2rem;    
   }
 `;
+
+export const SVGD = styled.svg`
+  color: red;
+  position: absolute;
+  margin-left: 1rem;
+`;
+
+export const SVGR = styled.svg`
+  color: green;
+  position: absolute;
+  margin-left: 1rem;
+`;
+
+export const SVGC = styled.svg`
+  color: orange;
+  position: absolute;
+  margin-left: 1rem;
+`;
