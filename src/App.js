@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import api from './services/api';
 import { Container, Row, Col, Jumbotron } from 'react-bootstrap';
+import { GiWorld, GiTransparentTubes } from "react-icons/gi";
 import Stats from './components/Stats';
 import SelectCountry from './components/SelectCountry';
 
 class App extends Component {
 
-  constructor(props){
-    super(props);    
-    this.state = {
-      confirmed: 0,
-      death: 0, 
-      recovery: 0
-    }
+  state = {
+    confirmed: 0,
+    death: 0, 
+    recovery: 0
   }
 
   async componentDidMount() {    
@@ -28,7 +26,7 @@ class App extends Component {
           <Col sm={12}>
           <Jumbotron fluid>
             <Container>
-              <h1>Estatísticas Covid-19</h1>
+              <h1>Estatísticas Covid-19 <GiTransparentTubes /></h1>
             </Container>
           </Jumbotron>
           </Col>
@@ -44,14 +42,10 @@ class App extends Component {
         </Row>
         <Row>
           <Col sm={12}>
-            <h2>Selecione o país</h2>
+            <h2><GiWorld/> Selecione o país</h2>
             <SelectCountry />
           </Col>
-        </Row>
-        <Row>
-          <Col sm={12}>          
-          </Col>
-        </Row>
+        </Row>        
       </Container>
     );
   }  
