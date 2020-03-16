@@ -22,32 +22,37 @@ class App extends Component {
 
   render(){
     return (
-      <Container>
-        <Row>
-          <Col sm={12}>
-          <Jumbotron fluid style={{backgroundColor: "#a192dc", color: "#fff", borderRadius: "10px", textAlign: "center"}}>
-              <Container>
-                <h1>Estatísticas Covid-19 <GiTransparentTubes /></h1>
-              </Container>
-          </Jumbotron>
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={12}>
-            <Stats 
-              confirmed={this.state.confirmed}
-              deaths={this.state.death}
-              recovered={this.state.recovery}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col sm={12}>
-            <h2><GiWorld/> Selecione o país</h2>
-            <SelectCountry />
-          </Col>
-        </Row>        
-      </Container>
+      <>
+        <Container fluid style={{padding: "0"}}>
+          <Row>
+            <Col sm={12}>
+            <Jumbotron fluid style={{backgroundColor: "#a192dc", color: "#fff", textAlign: "center"}}>
+                <Container>
+                  <h1>Estatísticas Covid-19 <GiTransparentTubes /></h1>
+                </Container>
+            </Jumbotron>
+            </Col>
+          </Row>
+        </Container>
+        
+        <Container>
+          <Row>
+            <Col sm={12}>
+              <Stats 
+                confirmed={this.state.confirmed}
+                deaths={this.state.death}
+                recovered={this.state.recovery}
+              />
+            </Col>
+          </Row>
+          <Row>
+            <Col sm={12}>
+              <h2><GiWorld/> Selecione o país</h2>
+              <SelectCountry />
+            </Col>
+          </Row>        
+        </Container>
+      </>
     );
   }  
 }
