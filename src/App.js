@@ -4,6 +4,7 @@ import { Container, Row, Col, Jumbotron } from 'react-bootstrap';
 import { GiWorld, GiTransparentTubes } from "react-icons/gi";
 import Stats from './components/Stats';
 import SelectCountry from './components/SelectCountry';
+import { TitleJumbotron } from './AppStyle';
 
 class App extends Component {
 
@@ -24,10 +25,10 @@ class App extends Component {
       <Container>
         <Row>
           <Col sm={12}>
-          <Jumbotron fluid>
-            <Container>
-              <h1>Estatísticas Covid-19 <GiTransparentTubes /></h1>
-            </Container>
+          <Jumbotron fluid style={{backgroundColor: "#a192dc", color: "#fff", borderRadius: "10px", textAlign: "center"}}>
+              <Container>
+                <h1>Estatísticas Covid-19 <GiTransparentTubes /></h1>
+              </Container>
           </Jumbotron>
           </Col>
         </Row>
